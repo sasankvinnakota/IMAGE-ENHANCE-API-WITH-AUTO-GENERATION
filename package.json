@@ -1,0 +1,19 @@
+{
+  "name": "image-enhance-api",
+  "version": "1.0.0",
+  "description": "Image Enhancement API — AWS Lambda + Stability AI",
+  "scripts": {
+    "deploy": "npx cross-env PIP_USER=no npx serverless deploy",
+    "deploy:prod": "npx cross-env PIP_USER=no npx serverless deploy --stage prod",
+    "remove": "npx serverless remove",
+    "logs": "npx serverless logs -f enhance --tail",
+    "info": "npx serverless info"
+  },
+  "dependencies": {
+    "serverless-python-requirements": "^6.1.0"
+  },
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-esbuild": "^1.57.2"
+  }
+}
